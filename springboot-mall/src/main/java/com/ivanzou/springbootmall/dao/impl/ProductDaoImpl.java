@@ -29,7 +29,7 @@ public class ProductDaoImpl implements ProductDao {
 
         List<Product> productList = namedParameterJdbcTemplate.query(sql, map, new ProductRowMapper());
 
-        if(productList.size()>0){
+        if(!productList.isEmpty()){
             return productList.get(0);
         }else{
             return null;
@@ -59,9 +59,7 @@ public class ProductDaoImpl implements ProductDao {
 
         namedParameterJdbcTemplate.update(sql, new MapSqlParameterSource(map), keyHolder);
 
-        int productId = keyHolder.getKey().intValue();
-
-        return productId;
+        return keyHolder.getKey().intValue();
     }
 
     @Override
