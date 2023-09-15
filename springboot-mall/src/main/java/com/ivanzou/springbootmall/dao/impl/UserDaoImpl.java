@@ -1,6 +1,7 @@
 package com.ivanzou.springbootmall.dao.impl;
 
 import com.ivanzou.springbootmall.dao.UserDao;
+import com.ivanzou.springbootmall.dto.UserLoginRequest;
 import com.ivanzou.springbootmall.dto.UserRegisterRequest;
 import com.ivanzou.springbootmall.model.User;
 import com.ivanzou.springbootmall.rowmapper.UserRowMapper;
